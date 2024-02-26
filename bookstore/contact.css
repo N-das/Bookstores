@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #0d192e;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px;
+    height: 600px;
+    background: #112b53;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .formbox{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .formbox form h2{
+    color: #ffff;
+    font-weight: 500;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+
+.container .formbox form .inputbox{
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.container .formbox form .inputbox:last-child{
+    margin-bottom: 0px;
+}
+
+.container .formbox form .inputbox input,
+.container .formbox form .inputbox textarea{
+    position: relative;
+    background: transparent;
+    outline: none;
+    border: none;
+    width: 100%;
+    color: #fff;
+    padding-bottom: 10px;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    resize: none;
+}
+
+.container .formbox form .inputbox textarea{
+    height: 100px;
+}
+
+.container .formbox form .inputbox input[type="submit"]{
+    background:#3210ee;
+    padding: 8px 20px;
+    margin-top: -10px;
+    width: 100px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 9px;
+}
+
+.container .formbox form .inputbox span{
+    position: absolute;
+    left: 0;
+    font-size: 16px;
+    font-weight: 300;
+    display: inline-block;
+    pointer-events: none;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: all 0.2%;
+}
+
+.container .formbox form ,.inputbox input:focus~span,
+.container .formbox form ,.inputbox textarea:focus~span,
+.container .formbox form ,.inputbox input:valid~span,
+.container .formbox form ,.inputbox textarea:focus~span{
+    transform: translateY(-24px);
+    color: #fab31b;
+    font-size: 14px;
+}
+
+.container .formbox form ,.inputbox input:focus,
+.container .formbox form ,.inputbox textarea:focus,
+.container .formbox form ,.inputbox input:valid,
+.container .formbox form ,.inputbox textarea:valid{
+    border-bottom-color: #fff;
+}
